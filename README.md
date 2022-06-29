@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Math Magicians project
-> Math Magicians project: Show About, Calculator, and Math quotes pages
+> Math Magicians project: Show About, Calculator, and Math quotes pages on the app
 
 ## Built With
 - React
