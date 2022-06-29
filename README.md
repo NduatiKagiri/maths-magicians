@@ -1,11 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Math Magicians project
-> Math Magicians project: Show About, Calculator, and Math quotes pages
+> Math Magicians project: Show About, Calculator, and Math quotes pages on the app
 
 ## Built With
 - React
-- ESLint, Stylelint, Web Hint, Lighthouse, Webpack
+- ESLint, Stylelint, Lighthouse, Webpack, Babel
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
