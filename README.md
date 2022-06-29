@@ -5,7 +5,7 @@
 
 ## Built With
 - React
-- ESLint, Stylelint, Web Hint, Lighthouse, Webpack
+- ESLint, Stylelint, Lighthouse, Webpack, Babel
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
