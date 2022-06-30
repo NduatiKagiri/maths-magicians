@@ -2,38 +2,62 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator {
+  padding-top: 30px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+table {
+  width: 450px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.answerBox {
+  border-top: 2px solid #fff;
+  background: #6e6a69;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 450px;
+  height: 55px;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.answerBox p {
+  border: none;
+  padding-right: 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+table tr {
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+table tr td {
+  border: 1px solid #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 112.5px;
+  cursor: pointer;
+}
+
+table tr td:hover {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+#zero {
+  width: 225px;
+}
+
+table tr td:last-child {
+  border-bottom: 1px solid #fff;
+  background: #f5913e;
 }
