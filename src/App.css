@@ -45,12 +45,23 @@ table tr td {
   align-items: center;
   height: 40px;
   width: 112.5px;
+}
+
+table tr td button {
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98%;
+  width: 98%;
   cursor: pointer;
 }
 
-table tr td:hover {
+table tr td button:hover {
   font-size: 24px;
   font-weight: bolder;
+  background: #f5e3b3;
 }
 
 #zero {
