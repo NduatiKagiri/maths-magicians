@@ -1,4 +1,6 @@
 import React from 'react';
+import calculate from '../logic/calculate';
+import Answer from './answer';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -6,41 +8,59 @@ class Calculator extends React.Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    this.buttonPressed = this.buttonPressed.bind(this);
+
+    this.setState({
+      total: null,
+      next: null,
+      operation: null,
+    });
+  }
+
+  buttonPressed = (buttonValue) => {
+    const answer = calculate(this.state, buttonValue);
+    this.setState(answer);
+  };
+
   render() {
+    const { total, next, operation } = this.state;
+    let myDisplay = `${total}${operation}${next}`.replace(/null/g, '');
+    myDisplay = myDisplay.replace(/undefined/g, '');
+    const window = myDisplay;
+
     return (
       <div className="calculator">
         <table>
-          <div className="answerBox">
-            <p>0</p>
-          </div>
+          <Answer answer={window === '' ? '0' : window} />
           <tr>
-            <td>AC</td>
-            <td>+/-</td>
-            <td>%</td>
-            <td>÷</td>
+            <td><button type="button" onClick={() => this.buttonPressed('AC')}>AC</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('+/-')}>+/-</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('%')}>%</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('÷')}>÷</button></td>
           </tr>
           <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>×</td>
+            <td><button type="button" onClick={() => this.buttonPressed('7')}>7</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('8')}>8</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('9')}>9</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('x')}>×</button></td>
           </tr>
           <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>-</td>
+            <td><button type="button" onClick={() => this.buttonPressed('4')}>4</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('5')}>5</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('6')}>6</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('-')}>-</button></td>
           </tr>
           <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>+</td>
+            <td><button type="button" onClick={() => this.buttonPressed('1')}>1</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('2')}>2</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('3')}>3</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('+')}>+</button></td>
           </tr>
           <tr>
-            <td id="zero">0</td>
-            <td>.</td>
-            <td>=</td>
+            <td id="zero"><button type="button" onClick={() => this.buttonPressed('0')}>0</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('.')}>.</button></td>
+            <td><button type="button" onClick={() => this.buttonPressed('=')}>=</button></td>
           </tr>
         </table>
       </div>
