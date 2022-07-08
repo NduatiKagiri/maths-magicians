@@ -1,0 +1,28 @@
+.quotes-container {
+  width: 100%;
+  padding: 30px 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.quote {
+  font-family: 'Bitter', sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  font-style: italic;
+  padding-top: 9px;
+  border-top: 1px solid #eaeaea;
+  width: 100%;
+}
+
+strong {
+  width: 100%;
+  font-family: 'Bitter', sans-serif;
+  padding-bottom: 9px;
+  font-weight: 500;
+  font-weight: bolder;
+  font-size: 19px;
+  border-bottom: 1px solid #eaeaea;
+}

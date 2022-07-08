@@ -21,6 +21,7 @@ const Calculator = () => {
 
   return (
     <div className="calculator">
+      <h3>Lets do some maths!</h3>
       <table>
         <Answer answer={window === '' ? '0' : window} />
         <tr>
