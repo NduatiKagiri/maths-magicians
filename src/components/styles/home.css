@@ -1,0 +1,20 @@
+.home-container {
+  width: 98vw;
+  padding: 30px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.home-header {
+  font: normal normal 600 27px/30px 'Rubik', sans-serif;
+  letter-spacing: 0;
+  margin-bottom: 24px;
+}
+
+.home-text {
+  font-family: 'Bitter', sans-serif;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
